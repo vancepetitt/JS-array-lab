@@ -274,6 +274,20 @@ console.log(appendedVegetarianDishes)
 //Hint: You do not want to check the array's indexes to find out what the array INCLUDES.
 //Filter
 
+function findChickpeaDishes(){
+    let results = dishes.filter(function(el){
+        if(el.ingredients.includes('chickpea')){
+            return true;
+        }
+        else{
+            return false;
+        }})
+    return results
+}
+
+let chickpeaDishes = findChickpeaDishes();
+console.log('Dishes containing Chickpeas: ', chickpeaDishes)
+
 //10. Create a function that will return the total serving count of all dishes.
 //Must use Reduce, not a loop.
 
