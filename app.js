@@ -251,8 +251,23 @@ console.log(appendedDishes)
 //8. Create a function that will append the cuisine type to the start of the dish's name. Then, return only the Vegetarian dish objects. So this function should return objects 11-13 with their names changed to "Vegetarian Lasagna", "Vegetarian Falafel", "Vegetarian Chili"
 //Map, Filter
 
+function findAppendedVegetarianDishes(){
+   
+    let filteredDishes = dishes.filter(function(el){
+        if(el.cuisine === 'Vegetarian'){
+            return true;
+        }
+        else{
+            return false;
+        }})
+    let results = filteredDishes.map(function(el){
+        return el.cuisine + ' ' + el.name
+    })
+    return results
+}
 
-
+let appendedVegetarianDishes = findAppendedVegetarianDishes();
+console.log(appendedVegetarianDishes)
 
 //BONUS
 //9. Create a function that will return dishes whose ingredients array INCLUDES "chickpea".
