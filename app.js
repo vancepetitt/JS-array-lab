@@ -202,8 +202,32 @@ console.log('Dishes with an even serving size: ', evenServingSize)
 //5. Create a function that will return dishes whose ingredients array is "tomato" and "cheese".
 //Filter
 
+function containsTomatoCheese(){
+
+    let results = dishes.filter(function(el){
+        if(el.ingredients.includes('tomato') && el.ingredients.includes('cheese')){
+            return true;
+        }
+        else{
+            return false
+        }})
+    return results
+    }
+
+let tomatoCheese = containsTomatoCheese();
+console.log('Dishes containing tomato and cheese: ', tomatoCheese)
+
 //6a. Create a function that will return an array of only the names of the cuisine types. Ie ['Italian', 'Mexican', ...]
 //Map
+
+// function cuisineTypes(){
+//     let results = dishes.map(function(){
+//         return el.cuisine
+//     }
+
+// let cuisineTypeList = cuisineTypes();
+// console.log('Cuisine Types: ', cuisineTypeList)
+
 // BONUS: (come back to this after finishing all)
 //6b. Use the filter method to eliminate duplicates, leaving only distinct values in the array
 
