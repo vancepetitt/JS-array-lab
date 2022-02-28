@@ -220,13 +220,16 @@ console.log('Dishes containing tomato and cheese: ', tomatoCheese)
 //6a. Create a function that will return an array of only the names of the cuisine types. Ie ['Italian', 'Mexican', ...]
 //Map
 
-// function cuisineTypes(){
-//     let results = dishes.map(function(){
-//         return el.cuisine
-//     }
+function cuisineTypes(){
 
-// let cuisineTypeList = cuisineTypes();
-// console.log('Cuisine Types: ', cuisineTypeList)
+    let results = dishes.map(function(el){
+        return el.cuisine
+    })
+    return results
+}
+
+let cuisineTypeList = cuisineTypes();
+console.log(cuisineTypeList)
 
 // BONUS: (come back to this after finishing all)
 //6b. Use the filter method to eliminate duplicates, leaving only distinct values in the array
@@ -247,4 +250,3 @@ console.log('Dishes containing tomato and cheese: ', tomatoCheese)
 //Must use Reduce, not a loop.
 
 //11. Create a function that will return an array of any objects that do not share a cuisine type with any other objects.
-
